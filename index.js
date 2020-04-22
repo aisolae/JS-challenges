@@ -7,4 +7,3 @@
 // alert(new_message);
 
 // // alert ('you have written '+ num_message+ "you have " + remain_message+ " characters left");
-//end
