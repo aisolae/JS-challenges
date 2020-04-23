@@ -35,3 +35,26 @@ alert(new_message);
  }
  lifeInWeeks();
  //end
+//cost per bottle of milk
+ function howMuch(money, costPerBottle){
+     console.log(bottlesCost(money, costPerBottle)+ " bottles of milk");
+     console.log( returnedMoney(money, costPerBottle)+ " your change") ; // change
+
+ }
+
+
+ function bottlesCost(startMoney, costPerBottle){
+
+    var num_bottles = startMoney/costPerBottle;
+    return num_bottles;
+
+ }
+
+ function returnedMoney(startMoney, costPerBottle){
+     var change =  startMoney % costPerBottle;
+     return change;
+ }
+
+ howMuch(31, 1.5 );
+
+ //end
