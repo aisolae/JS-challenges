@@ -76,4 +76,29 @@ alert(new_message);
  }
 
  leapYear(year);
- end
+ //end
+
+ //8. love calculator
+
+ var name_1 = prompt("what's your name?"); //TODO: verify is name are strings, verify the names are more then 10
+ var name_2 = prompt("what's your name?");
+ var name;
+ name_1 = name_1.slice(0,10);
+ name_2 = name_2.slice(0,10);
+ var rd_num = Math.random()
+ name = name_1.length * name_2.length;
+ var rand_num = name * rd_num;
+ var lov_value = Math.floor(rand_num) + 1;
+
+
+ if (lov_value > 70 ){
+  alert (name_1 +" 🥰 "+ name_2 + " "+ lov_value + "%" + " This is Above average")
+ }
+ else if(lov_value > 40 && lov_value <=70){
+  alert (name_1 +" 🥰 "+ name_2 + " "+ lov_value + "%"+" This is below average")
+ }
+ else{
+     alert(lov_value+ " your lova falls below middium");
+ }
+
+ //end
