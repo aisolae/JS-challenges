@@ -90,7 +90,6 @@ alert(new_message);
  var rand_num = name * rd_num;
  var lov_value = Math.floor(rand_num) + 1;
 
-
  if (lov_value > 70 ){
   alert (name_1 +" 🥰 "+ name_2 + " "+ lov_value + "%" + " This is Above average")
  }
@@ -101,4 +100,22 @@ alert(new_message);
      alert(lov_value+ " your lova falls below middium");
  }
 
+ //end
+
+
+ //9. search name through array
+
+ var guestList = ["Titi", "James", "Jason", "Angela", "Samuel"]
+ var name = prompt("What's your name?");
+
+ if (guestList.includes(name) == true){
+     console.log("Welcome");
+ }
+ else {
+     console.log("Your name isn't on the list");
+ }
+
+ console.log();
+ //TODO: add push to input values into the array
+ //TODO: Verify names in the array.
  //end
