@@ -85,7 +85,7 @@ alert(new_message);
  var name;
  name_1 = name_1.slice(0,10);
  name_2 = name_2.slice(0,10);
- var rd_num = Math.random()
+ var rd_num = Math.random();
  name = name_1.length * name_2.length;
  var rand_num = name * rd_num;
  var lov_value = Math.floor(rand_num) + 1;
@@ -108,7 +108,7 @@ alert(new_message);
  var guestList = ["Titi", "James", "Jason", "Angela", "Samuel"]
  var name = prompt("What's your name?");
 
- if (guestList.includes(name) == true){
+ if (guestList.includes(name) === true){
      console.log("Welcome");
  }
  else {
@@ -123,18 +123,41 @@ alert(new_message);
  //10. fizzbuz
  var output = [];
  var count = 1;
- 
- function fizzBuzz() {
-     if (count % 3 === 0 && count % 5 === 0) {
-         output.push("fizzBuzz")
-     } else if (count % 3 === 0) {
-         output.push("fizz");
-     } else if (count % 5 === 0) {
-         output.push("Buzz");
-     } else {
-         output.push(count);
+
+
+ function fizzBuzz(){
+
+     while (count <= 100) { //added a while.
+         if (count % 3 === 0 && count % 5 === 0){
+             output.push("fizzBuzz")
+         }
+         else if (count % 3 === 0){
+             output.push("fizz");
+         }
+         else if(count % 5 === 0){
+             output.push("Buzz");
+         }
+         else {
+             output.push(count);
+         }
+         count++;
+         console.log(output);
      }
-     count++;
-     console.log(output);
  }
+
  fizzBuzz();
+
+
+ //11. who is buying lunch
+
+ function whoPaying(){
+
+     var friend_name = ["Angela", "Ben", "Jenny", "Micheal", "Chloe"];
+     var n = Math.random();
+     var length_friend = friend_name.length;
+     var ran_f =  Math.floor(n * length_friend) +1;
+     console.log(friend_name[ran_f] +" is going to buy lunch today");
+ }
+ whoPaying();
+
+ //end
