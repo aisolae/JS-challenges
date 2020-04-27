@@ -161,3 +161,32 @@ alert(new_message);
  whoPaying();
 
  //end
+
+ //12. BMI calculator
+
+ var weight = prompt("what's your weight?"); //first without the variable and a constant of 65 and 1.8
+ var height = prompt("What's your height?");
+
+ function bmiCalculator(weight, height){
+
+     console.log(bCalculator (weight, height));
+
+ }
+
+ function bCalculator (myweight, myheight){
+     var theight = Math.pow(myheight, 2);
+     var tBmi = Math.floor(myweight/theight) ;
+     if (tBmi < 18.5){
+         console.log("your BMI is "+tBmi +", so you are underweight"  )
+     }
+     if(tBmi >= 18.5 && tBmi <= 24.9){
+        console.log("your BMI is "+tBmi +", so you are normal weight"  )
+
+     }
+     else{
+          console.log("your BMI is "+tBmi +", so you are overweight"  )
+     }
+     return tBmi;
+ }
+
+ bmiCalculator(weight, height);  //recall the assigned variable .
