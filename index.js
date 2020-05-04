@@ -190,3 +190,19 @@ alert(new_message);
  }
 
  bmiCalculator(weight, height);  //recall the assigned variable .
+
+
+ //99 bottles challenge
+
+ let first_sentence = "bottles of beer on the wall, ";
+ let second_sentence = "bottles of beer.";
+ let third_sentence = "take one down and pass it around,";
+ let fourth_sentence = "bottles of beer on the wall.";
+
+ for (i=99; i >= 0; i--){
+     console.log(i + " "+ first_sentence+" "+i+" "+second_sentence);
+     console.log(third_sentence+ --i+" "+fourth_sentence);
+     i+=1;
+
+
+ }
