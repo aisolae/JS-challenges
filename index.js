@@ -192,7 +192,7 @@ alert(new_message);
  bmiCalculator(weight, height);  //recall the assigned variable .
 
 
- //99 bottles challenge
+ //13. 99 bottles challenge
 
  let first_sentence = "bottles of beer on the wall, ";
  let second_sentence = "bottles of beer.";
@@ -206,3 +206,45 @@ alert(new_message);
 
 
  }
+// 14.  mad libs challenge
+var verb = prompt("Please, enter a verb ")
+var noun = prompt('please, enter a noun.')
+var adjective = prompt("please, enter an adjective")
+alert("all done")
+document.write("There once was  " + adjective + " programmer who wanted to learn fullstack to "+ verb+" the "+ noun )
+
+// 14.  mad libs challenge with remainder
+// var verb = prompt("Please, enter a verb [2 questions left] ")
+// var noun = prompt('please, enter a noun. [1 question left]')
+// var adjective = prompt("please, enter an adjective")
+// alert("all done")
+// document.write("There once was  " + adjective + " programmer who wanted to learn fullstack to "+ verb+" the "+ noun )
+
+var question = 3;
+var questionLeft = " [ " + question + " questions left ]"
+var verb = prompt("Please, enter a verb" + questionLeft)
+questionLeft =question - 1
+var questionLeft = " [ " + question + " questions left ]"
+var noun = prompt('please, enter a noun.' +questionLeft)
+questionLeft =question - 1
+var questionLeft = " [ " + question + " question left ]"
+var adjective = prompt("please, enter an adjective" + questionLeft)
+alert("all done")
+document.write("There once was  " + adjective + " programmer who wanted to learn fullstack to "+ verb+" the "+ noun )
+
+//15. randomize your values
+
+var number = prompt("what's your favorite number?")
+var new_number = Math.random() * parseInt(number);
+var final_number = Math.floor(new_number) + 1;
+alert (final_number);
+
+//16. Random Number Guessing Game
+
+
+
+//17. improving random number with  else if
+
+
+
+//18. quiz program.
