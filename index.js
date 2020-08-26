@@ -234,17 +234,137 @@ document.write("There once was  " + adjective + " programmer who wanted to learn
 
 //15. randomize your values
 
-var number = prompt("what's your favorite number?")
+var number = prompt("guess what number i am thinking btw 1-6")
 var new_number = Math.random() * parseInt(number);
 var final_number = Math.floor(new_number) + 1;
 alert (final_number);
 
 //16. Random Number Guessing Game
+var GuessNumber = prompt("what number am i thinking btw 1-6?");
+var random_math = Math.random() * parseInt(GuessNumber);
+var out_number = Math.floor (random_math) +1;
 
+if (GuessNumber === out_number){ 
+    
+    alert("you guessed right");
 
+}
+else{
+alert ("you need to try again." + " the guess number is "+ out_number)
+}
+
+//16.1 Random Number Guessing Game
+var correct_guess = false
+var GuessNumber = prompt("what number am i thinking btw 1-6?");
+var random_math = Math.random() * parseInt(GuessNumber);
+var out_number = Math.floor (random_math) +1;
+
+if (GuessNumber === out_number){
+    correct_guess = True
+}
+
+if (correct_guess === True){ 
+    
+    alert("you guessed right");
+
+}
+else{
+alert ("you need to try again." + " the guess number is "+ out_number)
+}
 
 //17. improving random number with  else if
+var correct_guess = false
+var GuessNumber = prompt("what number am i thinking btw 1-6?");
+var random_math = Math.random() * parseInt(GuessNumber);
+var out_number = Math.floor (random_math) +1;
 
-
-
+if (GuessNumber === out_number){
+    correct_guess = true
+}else if( GuessNumber < out_number ){
+    var GuessNumber_2 = prompt("your answer is lower than the output, please try again?");
+    if (GuessNumber_2 === out_number){
+        correct_guess = true
+    }
+}else if (GuessNumber > out_number){
+     var guessNumber_3 = prompt("your answer is greater than the output, please try again");
+     if (guessNumber_3 === out_number){
+        correct_guess = true
+     }
+ }
+if (correct_guess){
+    alert("your answer was right")
+ }
+else{
+alert ("you need to try again." + " the guess number is "+ out_number)
+}
 //18. quiz program.
+var question_correct = false
+var question_count = 5
+var question_left = " [you have "+ question_count + " left]"
+var question_1 = prompt("what's the capital of china?" + question_left);
+if (question_1.toUpperCase = "BEIJING"){
+    count +=1
+} 
+var question_count = question_count -1 
+var question_left = " [you have "+ question_count + " left]"
+var question_2 = prompt("What's the capital of Nigeria?"  + question_left);
+if (question_2.toUpperCase = "BEIJING"){
+    count +=1
+} 
+var question_count = question_count -1 
+var question_left = " [you have "+ question_count + " left]"
+var question_3 = prompt("What's the capital of Nigeria?"  + question_left);
+if (question_3.toUpperCase = "BEIJING"){
+    count +=1
+} 
+var question_count = question_count -1 
+var question_left = " [you have "+ question_count + " left]"
+var question_4 = prompt("What's the capital of Nigeria?"  + question_left);
+if (question_4.toUpperCase = "BEIJING"){
+    count +=1
+} 
+var question_count = question_count -1 
+var question_left = " [you have "+ question_count + " left]"
+var question_5 = prompt("What's the capital of Nigeria?"  + question_left);
+if (question_5.toUpperCase = "BEIJING"){
+    count +=1
+} 
+ 
+if (count === 5 ){
+    alert ( "you have won a gold star ⭐️")
+    
+}
+else if (count >= 3){
+    alert ("you have won a 🥈 medaal")
+}
+
+else if (count >= 1){
+    alert("you have won nothing.")
+}
+
+// 19. functions with random generator
+
+function random_number(){
+    var num1 = prompt(" pick a btw 1 & 10");
+    if ( isNaN(num1)){
+        throw "your value isn't a number";  //output error on the console
+    }
+    if (num1 <1 || num1 > 10){
+        var num_wrong = prompt("you picked outside the range, enter a value btw 1 & 10")
+        num1 = num_wrong;
+    }
+    var num2 = prompt(" pick a btw 10 & 30");
+    if (isNaN(num2)){
+        throw "your value isn't a number"
+    }
+    if (num2 <10 || num2 > 30){
+        var num_wrong = prompt("you picked outside the range, enter a value btw 10 & 30")
+        num2 = num_wrong;
+    }
+    var new_number = parseInt(num2 - num1);
+    var rand_new_num = Math.floor(Math.random() * new_number)+ 1
+    return rand_new_num;
+
+}
+
+alert(random_number());
